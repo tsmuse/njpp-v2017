@@ -1,0 +1,143 @@
+@import 'normalize.css';
+@import 'breakpoint';
+
+
+$calluna: "calluna",serif;
+$calluna-sans: "calluna-sans", sans-serif;
+$baseline: 0.25rem;
+$nav-padding: ($baseline * 3) ($baseline * 6);
+
+$cream: #FFF6C9;
+$greencream: #C8E8C7;
+$lightgreen: #A4DEAB;
+$palegreen: #85CC9F;
+$deepgreen: #499E8D;
+$darkgreen: #0E1F1B;
+$darkblue: #111626;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $calluna-sans;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background-color: lighten($greencream, 13%);
+  color: lighten($darkblue, 8%);
+}
+
+nav{
+  display:flex;
+  justify-content: space-between;
+  // background-color: lighten(black, 90%);
+  background-color: #fff;
+  margin-bottom:$baseline * 3;
+
+
+  .my-name{
+    // color: lighten(black, 30%);
+    color: $deepgreen;
+    flex: 1;
+    padding:$baseline * 3 0 $baseline * 3 $baseline * 3;
+    font-size: 1.1rem;
+    line-height: $baseline * 7;
+    @include breakpoint(767px){
+      font-size: 1.5rem;
+      line-height: $baseline * 8;
+      padding:$nav-padding;
+    }
+
+
+  }
+  .menu-items{
+    flex: 1;
+    padding:$baseline * 3 0;
+    @include breakpoint(767px){
+      flex: 2;
+      padding:$nav-padding;
+    }
+
+    ul{
+      list-style: none;
+      margin:0;
+      padding: 0 0.6rem 0 0;
+      text-align: right;
+    }
+
+    ul li{
+      // color: lighten(black, 30%);
+      color: $palegreen;
+      display:inline-block;
+      padding:0 0.25rem;
+      font-size:0.85rem;
+      line-height: $baseline * 7;
+      @include breakpoint(767px){
+        font-size:1rem;
+        line-height: $baseline * 8;
+      }
+
+    }
+  }
+}
+
+.home-text-block{
+  padding: $baseline * 4;
+  p{
+    font-family: $calluna;
+    //font-size: 1.35rem;
+    //line-height: $baseline * 7;
+    font-size: 5.9vw;
+    line-height: 7.75vw;
+    width:85vw;
+    max-width: 1100px;
+    margin:0 auto $baseline * 3;
+    padding:0;
+
+    @include breakpoint(767px){
+      font-size: 4.1vw;
+      line-height:5.4vw;
+      width:77vw;
+    }
+
+    @include breakpoint(1235px){
+      font-size: 3rem;
+      line-height: $baseline * 15;
+      max-width: 1000px;
+    }
+    a{
+      //display:inline-block;
+      // color:lighten(black, 40%);
+      color: $deepgreen;
+      text-decoration: none;
+      transition: background ease-in-out 0.18s;
+      transition: color ease-in-out 0.18s;
+
+
+    }
+    a:hover{
+      // border-bottom: $baseline dotted lighten(black, 20%);
+      color: lighten($darkblue, 35%);
+      // need to create image to act as dots, bg that repeats on x-axis, pinned to the bottom
+
+    }
+  }
+
+  .top-headline{
+
+    a{
+      display:inline-block;
+    }
+
+  }
+  .bottom-text{
+
+  }
+}
+.small-only{
+  display:inline;
+  @include breakpoint(376px){
+    display:none;
+  }
+}

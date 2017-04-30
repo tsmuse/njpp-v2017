@@ -1,0 +1,12 @@
+{
+  "name": "njpp-site-2017",
+  "version": "0.0.1",
+  "description": "portfolio website",
+  "main": "index.html",
+  "author": "Tony Santos",
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize.css": "^6.0.0"
+  }
+}
