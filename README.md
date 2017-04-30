@@ -4,7 +4,7 @@ This is the source of my current portfolio site...unless I forgot to reuse this 
 
 ## Build instructions
 
-all of this will eventually be wrapped up in a build tool, this is just for me as I'm building the site and deciding on a SSG to use.
-
-* Build sass files
+* build Sass files *todo: move sass build into grunt*
+* *npm install*  
+* *grunt build*
 * That's it!

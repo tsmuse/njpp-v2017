@@ -1,0 +1,13 @@
+{
+  "generator-assemble": {
+    "projectName": "njpp site 2017",
+    "projectDesc": "My current portfolio",
+    "authorLogin": "tsmuse",
+    "installPlugin": false,
+    "author": {
+      "name": "Tony Santos",
+      "login": "assemble",
+      "email": "tony@notjustprettypictures.com"
+    }
+  }
+}
