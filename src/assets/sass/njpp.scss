@@ -1,11 +1,12 @@
 @import 'normalize.css';
-@import 'breakpoint';
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 
 $calluna: "calluna",serif;
 $calluna-sans: "calluna-sans", sans-serif;
 $baseline: 0.25rem;
 $nav-padding: ($baseline * 3) ($baseline * 6);
+
 
 $cream: #FFF6C9;
 $greencream: #C8E8C7;

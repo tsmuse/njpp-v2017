@@ -33,13 +33,17 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
+      sass:{
+        files: ['<%= config.src %>/assets/sass/*.scss'],
+        tasks: ['sass:dev']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
           '<%= config.dist %>/{,*/}*.html',
-          '<%= config.dist %>/assets/{,*/}*.css',
+          '<%= config.dist %>/assets/{,*/}/*.css',
           '<%= config.dist %>/assets/{,*/}*.js',
           '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -89,7 +93,20 @@ module.exports = function(grunt) {
         dest: '<%= config.dist %>/assets/css/'
       }
     },
+
     sass: {
+      dev: {
+        options: {
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/assets/sass',
+          src: ['*.scss'],
+          dest: '<%= config.dist %>/assets/css',
+          ext: '.css'
+        }]
+      },
       dist: {
         options: {
           style: 'compressed'
@@ -121,7 +138,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'sass',
+    'sass:dist',
     'assemble'
   ]);
 
