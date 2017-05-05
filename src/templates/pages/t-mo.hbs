@@ -1,9 +1,65 @@
 ---
 layout: src/templates/layouts/case-study.hbs
+hero-src: http://www.fillmurray.com/1000/400
+hero-alt: "Some thing descriptive goes here"
+toc:
+  t-mobile:
+    overview: "Overview"
+    team: "Leading the team"
+    tablet: "Taking QuikView mobile"
+    images: "Grid of pretty"
+    more: "Wanna see more?"
 ---
-
+<h1> T-mobile USA</h1>
 <section class="case-study">
+  <h2 id="overview">{{toc.t-mobile.overview}}</h2>
+  <h2 id="team">{{toc.t-mobile.team}}</h2>
+  <h2 id="tablet">{{toc.t-mobile.tablet}}</h2>
+  <p>When we started this project, the process of selling a phone at a T-Mobile store was still done on paper and then transfered to a computer that sat on a desk at the back of the sales floor. Our goal was to unteather the sales representatives, to make it faster for them to make a sale and incentiveize them to do the other parts of their job that they didn’t earn a commission for, like technical support or helping customers pay their bill. </p>
+
+  <h3 id="in-store-software-means-in-store-research">In-store software means in-store research</h3>
+
+  <p>We started this project by spending about a week in three different retail stores in the greater Seattle area. Through observation and some interviews with the retail staff we uncovered our main considerations to make this software actually work in the day-to-day job of selling cell phones. Juggling multiple customers and activities at once, having to do a lot of backtracking in the actual process of selling and activating a phone, and making a piece of software that would work with full hands and also tolerate things being laid on top of the tablet were key findings.</p>
+
+  <div class="case_study_image">
+  	<img class="img-responsive center-block" src="../img/portfolio/tmo_01.png" alt="task flow diagram" />
+  	<b class="figcaption">Diagramming the tasks the sales reps used in their daily work allowed me to understand the non-linear pattern of most of the work they were using the system for and design the new app around the way they were actually working.</b>
+  </div>
+
+  <h3 id="not-even-rivers-flow-in-a-straight-line">Not even rivers flow in a straight line</h3>
+
+  <p>Nothing about a customer interaction was linear, and yet the systems we were trying to update all relied on linear, wizard driven task flows. I isolated the major tasks in selling and upgrading a phone and designed all the interaction points of the process to function more like a “hub-and-spoke” and less like a straight line, to accommodate the back and forth nature of how a transaction actually played out. I removed the penalty to the rep for customers changing their mind at the last second about a handset or a service plan, and this was possible mostly due to the shopping cart model I adopted to also account for the fast customer switching requirement. </p>
+
+  <div class="case_study_image">
+  	<img class="img-responsive center-block" src="../img/portfolio/tmo_02.png" alt="Customer queue wireframe" />
+  	<b class="figcaption">Moving the customer queue from paper to the tablet was a balancing act between giving the sales reps enough information to enter a customer interaction informed, but not so much information that they would be tempted to cherry pick, something multiple store managers worried about when they reviewed the designs in progress.</b>
+  </div>
+
+  <h3 id="queue-up-more-than-just-a-list">Queue up, more than just a list</h3>
+
+  <p>The store’s customer queue was literally just a piece of paper on a clipboard. I added pre-verification of customers at the time they entered the queue because it was a real flow stopper when the sales reps had to verify the customer. Customers often had started shopping while waiting, they were ready to buy when it was their turn. I also turned “the list” into a communication channel between the floor manager and sales associates to pass messages like, “customer was upset when she came in.” All of these features combined to allow the sales staff to stay on the sales floor instead of finding the floor manager for their next customer every time.</p>
+
+  <div class="case_study_image">
+  	<img class="img-responsive center-block" src="../img/portfolio/tmo_03.png" alt="Account details wireframe" />
+  	<b class="figcaption">The original account details “screen” was actually six screens. We didn't need most of the information in them to sell or upgrade a customer. In the rare case the sales reps did need the additional details, they still had the desktop version in-store.</b>
+  </div>
+
+  <h3 id="just-the-facts-err-details-maam">Just the facts… err details, ma’am</h3>
+
+  <p>The software we were replacing was designed for the call center customer service employees. That meant it had a lot of things the retail sales reps didn’t need to see. One of the biggest challenges of the project was cutting down the account details displays to work as a single screen. There were a lot of “What IFs?” that needed to be explored before I cut anything (and I cut A LOT.) The final layout looks very simple, because it is, and it’s easy to read at a glance. Both were only possible because of the massive cutting of unneeded information.</p>
+
+  <div class="case_study_image">
+  	<img class="img-responsive center-block" src="../img/portfolio/tmo_04.png" alt="User picker wireframe" />
+  	<b class="figcaption">The user picker lock screen surprisingly became the most interesting interface to work on in the app. It's a great example of constraints pushing the design to be better.</b>
+  </div>
+
+  <h3 id="every-tablet-is-my-tablet">Every tablet is “my tablet”</h3>
+
+  <p>In our research, we saw the sales reps carried a lot of different things around in the course of helping a customer. THat meant they were likely to put the tablet down. A lot. We also weren’t going to have one tablet per rep in the stores, a hard design constraint that brought a lot of fun features to life. On the surface, this meant the app needed a to have user accounts and a login and user switching. Having this lock screen let me surface other information quickly: who was currently on the floor, who currently was acting as the floor manager, and who was on break/lunch. This information sounds trivial until you are interrupted while trying to sell a phone by a customer who is looking for the rep that was helping her two hours ago. The system lets a rep pick up any tablet, if she is not currently carrying one, and learn the status of a coworker. </p>
+
+  <p>T-Mobile USA is a huge company. Things don’t always move quickly. We finished this project and it moved into development and didn’t exit development until I was no longer consulting for T-Mobile. I have seen tablet QuikView in use in the company’s retail stores, and the pattern of the sales reps having to move back and forth between the desk and the sales floor was noticeably absent with the tablets in place. </p>
 </section>
 <section class="image-gallery">
+  <h2 id="images">{{toc.t-mobile.images}}</h2>
 </section>
 {{> contact-footer}}

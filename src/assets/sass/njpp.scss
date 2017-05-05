@@ -142,3 +142,24 @@ nav{
     display:none;
   }
 }
+
+.case-header{
+  display: flex;
+
+  .hero-img{
+    flex: 3;
+    padding: $baseline 10px;
+
+    img{
+      width:100%;
+    }
+  }
+
+  .toc-menu{
+    flex: 1;
+
+    ul{
+      list-style: none;
+    }
+  }
+}
