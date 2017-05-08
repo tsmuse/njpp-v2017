@@ -17,16 +17,14 @@ component: navbar
 <!-- IFF not on the homepage show the subnav -->
 {{#isnt basename "index"}}
 <nav class="toc-menu">
-  <ul>
-    <li><span>{{ page.title }}: </span></li>
-    <li>
+  <p class="title">{{ page.title }}:</p>
+  <ul class="sub-menu">
       {{#each page.toc}}
       <!-- this pattern is assuming the image grid will always be the last section
            if the design changes this will need to be updated
       -->
         <li><a href="#{{@key}}">{{this}}{{#isnt @key "images"}},{{/isnt}}</a></li>
       {{/each}}
-    </li>
   </ul>
 </nav>
 {{/isnt}}

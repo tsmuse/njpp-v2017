@@ -1,0 +1,117 @@
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: ($baseline * 42) ($baseline * 4) ($baseline * 13);
+
+  @include breakpoint($tablet){
+    padding: ($baseline * 48) ($baseline * 10) ($baseline * 25);
+  }
+  @include breakpoint($sm-laptop){
+    padding: ($baseline * 52) ($baseline * 20) ($baseline * 25);
+  }
+
+  h1{
+    font-family: $calluna-sans;
+    font-size: 2rem;
+    line-height: $baseline * 8;
+    font-weight: $calluna-regular;
+    margin: 0 auto $baseline * 8;
+    text-align: center;
+
+    @include breakpoint($tablet){
+      font-size: 2.25rem;
+      line-height: $baseline * 10;
+      margin: 0 auto $baseline * 12;
+    }
+
+    @include breakpoint($sm-laptop){
+      margin: 0 auto $baseline * 18;
+
+    }
+  }
+
+  h2{
+    font-family: $calluna-sans;
+    font-size: 1.5rem;
+    line-height: $baseline * 8;
+    font-weight: $calluna-light;
+    margin: 0 auto $baseline * 8;
+    padding-top: $baseline * 2;
+    text-align: center;
+
+    @include breakpoint ($tablet){
+      margin: 0 auto $baseline * 10;
+      padding-top: $baseline * 4;
+    }
+  }
+
+  p{
+    font-family: $calluna;
+    font-size: 1.1rem;
+    line-height: $baseline * 6;
+    margin: 0 auto $baseline * 10;
+    max-width: 19.45rem;
+
+    @include breakpoint($tablet){
+      font-size: 1.25rem;
+      line-height: $baseline * 8;
+      margin: 0 auto $baseline * 10;
+      max-width: 38.45rem;
+    }
+    @include breakpoint($sm-laptop){
+      font-size: 1.25rem;
+      line-height: $baseline * 7;
+      margin: 0 auto $baseline * 10;
+      max-width: 38.75rem;
+    }
+  }
+}
+
+.image-block {
+  max-width: 860px;
+  width:100%;
+  margin: 0 auto $baseline * 12;
+
+  @include breakpoint($sm-laptop){
+    margin: 0 auto $baseline * 14;
+  }
+
+  img{
+    display: block;
+    width:100%;
+    margin-bottom: $baseline * 2;
+  }
+
+  figcaption{
+    font-size: 0.95rem;
+    color:$palegreen;
+
+  }
+}
+
+.pretty-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  width:100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 860px;
+
+  li {
+    flex: 1 1 860px;
+    padding: 0 $baseline;
+    margin-bottom: $baseline;
+
+    @include breakpoint($sm-laptop){
+      max-width: 860px;
+      margin: 0 auto $baseline;
+      flex:1 1 250px;
+    }
+
+    a img {
+      width:100%;
+    }
+  }
+}

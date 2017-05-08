@@ -1,0 +1,71 @@
+.contact-footer{
+  background-color: $deepgreen;
+  padding: ($baseline * 6) ($baseline * 8) ($baseline * 15);
+
+  @include breakpoint($tablet){
+    padding: ($baseline * 6) ($baseline * 10) ($baseline * 15);
+  }
+  @include breakpoint($sm-laptop){
+    padding: ($baseline * 10) ($baseline * 30) ($baseline * 20);
+  }
+
+  .footer-wrapper{
+    @include breakpoint($tablet){
+      margin: 0 auto;
+    }
+    @include breakpoint($sm-laptop){
+      max-width: $max-width;
+
+    }
+
+  }
+
+  h2 {
+    font-family: $calluna;
+    font-size: 2.5rem;
+    line-height: $baseline * 12;
+    margin: 0 0 $baseline;
+
+    @include breakpoint($tablet){
+      font-size: 3.85rem;
+      line-height: $baseline * 19;
+    }
+
+    @include breakpoint($sm-laptop){
+      font-size: 4rem;
+      line-height: $baseline * 20;
+      margin: 0 0 $baseline;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: $baseline * 6;
+    margin:0;
+
+    @include breakpoint($tablet){
+      font-size: 1.3rem;
+
+    }
+
+    @include breakpoint($sm-laptop){
+      font-size: 1.45rem;
+      line-height: $baseline * 7;
+      margin:0;
+      max-width:53rem;
+    }
+  }
+
+  a {
+    color: lighten($palegreen, 15%);
+    text-decoration: none;
+
+    &:hover{
+      color: $link-hover-color;
+    }
+  }
+  .email-punctuation{
+    font-size: 0.95rem;
+
+  }
+}
