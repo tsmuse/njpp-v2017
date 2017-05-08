@@ -15,11 +15,11 @@
   </head>
   <body>
     {{> navbar }}
-
-    <div class="" role="main">
-
+    <div class={{#is basename "index"}}"wrapper-index"{{else}}"wrapper"{{/is}} role="main">
       {{> body }}
-
     </div>
+    {{#isnt basename "index"}}
+      {{> contact-footer}}
+    {{/isnt}}
   </body>
 </html>

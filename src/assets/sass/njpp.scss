@@ -7,6 +7,14 @@ $calluna-sans: "calluna-sans", sans-serif;
 $baseline: 0.25rem;
 $nav-padding: ($baseline * 3) ($baseline * 6);
 
+$calluna-regular: 400;
+$calluna-light: 300;
+$calluna-semib: 600;
+$calluna-bold: 700;
+$calluna-black: 900;
+
+$max-width: 1600px;
+
 
 $cream: #FFF6C9;
 $greencream: #C8E8C7;
@@ -16,8 +24,20 @@ $deepgreen: #499E8D;
 $darkgreen: #0E1F1B;
 $darkblue: #111626;
 
+$link-hover-color: lighten($darkblue, 35%);
+
 *{
   box-sizing: border-box;
+}
+
+//no top margins evvvvar!!!!
+ul, h1, h2, h3 {
+  margin:0;
+
+}
+
+a {
+  transition: color 0.25s ease-in-out;
 }
 
 body{
@@ -28,13 +48,49 @@ body{
   background-color: lighten($greencream, 13%);
   color: lighten($darkblue, 8%);
 }
+header{
+  position: fixed;
+  width:100%;
+  top:0;
+}
 
-nav{
+.wrapper{
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: ($baseline * 52) ($baseline * 40) ($baseline * 25);
+
+  h1{
+    font-family: $calluna-sans;
+    font-size: 2.25rem;
+    line-height: $baseline * 10;
+    font-weight: $calluna-regular;
+    margin: 0 auto $baseline * 18;
+    text-align: center;
+  }
+
+  h2{
+    font-family: $calluna-sans;
+    font-size: 1.5rem;
+    line-height: $baseline * 8;
+    font-weight: $calluna-light;
+    margin: 0 auto $baseline * 10;
+    padding-top: $baseline * 4;
+    text-align: center;
+  }
+
+  p{
+    font-family: $calluna;
+    font-size: 1.25rem;
+    line-height: $baseline * 7;
+    max-width: 43.75rem;
+    margin: 0 auto $baseline * 10;
+  }
+}
+.top-nav{
   display:flex;
   justify-content: space-between;
-  // background-color: lighten(black, 90%);
   background-color: #fff;
-  margin-bottom:$baseline * 3;
+  //margin-bottom:$baseline * 3;
 
 
   .my-name{
@@ -119,9 +175,8 @@ nav{
     }
     a:hover{
       // border-bottom: $baseline dotted lighten(black, 20%);
-      color: lighten($darkblue, 35%);
       // need to create image to act as dots, bg that repeats on x-axis, pinned to the bottom
-
+      color: $link-hover-color;
     }
   }
 
@@ -143,23 +198,123 @@ nav{
   }
 }
 
-.case-header{
+
+.toc-menu{
+  background-color: #fff;
+  border-top: 1px solid lighten($palegreen, 15%);
+  padding: $baseline*2 0;
+  ul{
+    list-style: none;
+    padding:0;
+
+    li{
+      display: inline-block;
+    }
+
+    li span{
+      padding: $baseline * 3 0 $baseline * 3 $baseline * 3;
+      color: $deepgreen;
+      font-size: 1.55rem;
+      line-height: $baseline * 8;
+      font-family: $calluna;
+      font-weight: $calluna-regular;
+
+      @include breakpoint(767px){
+        // font-size: 1.5rem;
+        // line-height: $baseline * 8;
+        padding:$nav-padding;
+        padding-right:0;
+      }
+    }
+    li a{
+      font-family: $calluna;
+      text-decoration: none;
+      color: $palegreen;
+      font-size: 1.1rem;
+      line-height: $baseline * 8;
+      padding: 0 0.125rem;
+    }
+    li a:hover{
+      color: $link-hover-color;
+    }
+
+  }
+}
+
+.image-block{
+  max-width: 53.75rem;
+  width:80%;
+  margin: 0 auto $baseline * 14;
+
+  img{
+    display: block;
+    width:100%;
+    margin-bottom: $baseline * 2;
+  }
+
+  figcaption{
+    font-size: 0.95rem;
+    color:$palegreen;
+
+  }
+}
+
+.pretty-grid{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
 
-  .hero-img{
-    flex: 3;
-    padding: $baseline 10px;
 
-    img{
+
+  li {
+    max-width: 12.5rem;
+    flex: 1 1 12.5rem;
+    padding: 0 $baseline;
+    margin-bottom: $baseline;
+
+    a {
+
+    }
+
+    a img {
       width:100%;
     }
   }
+}
+.contact-footer{
+  background-color: $deepgreen;
+  padding: ($baseline * 10) ($baseline * 30) ($baseline * 20);
 
-  .toc-menu{
-    flex: 1;
+  .footer-wrapper{
+    max-width: $max-width;
+    margin: 0 auto;
+  }
 
-    ul{
-      list-style: none;
+  h2 {
+    font-family: $calluna;
+    font-size: 4rem;
+    line-height: $baseline * 20;
+    margin: 0 0 $baseline;
+  }
+
+  p {
+    font-size: 1.45rem;
+    line-height: $baseline * 7;
+    margin:0;
+    max-width:53rem;
+  }
+
+  a {
+    color: lighten($palegreen, 15%);
+    text-decoration: none;
+
+    &:hover{
+      color: $link-hover-color;
     }
+  }
+  .email-punctuation{
+    font-size: 0.95rem;
+
   }
 }

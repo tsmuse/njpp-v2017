@@ -1,12 +1,12 @@
 ---
 component: navbar
 ---
-<nav>
+<header>
+<nav class="top-nav">
   <div class="my-name">
     <span>Tony Santos</span>
   </div>
   <div class="menu-items">
-    <!-- a UL will go here with stuff in it. Once there is stuff to put in it -->
     <ul>
       <li>work</li>
       <li>writting</li>
@@ -14,3 +14,20 @@ component: navbar
     </ul>
   </div>
 </nav>
+<!-- IFF not on the homepage show the subnav -->
+{{#isnt basename "index"}}
+<nav class="toc-menu">
+  <ul>
+    <li><span>{{ page.title }}: </span></li>
+    <li>
+      {{#each page.toc}}
+      <!-- this pattern is assuming the image grid will always be the last section
+           if the design changes this will need to be updated
+      -->
+        <li><a href="#{{@key}}">{{this}}{{#isnt @key "images"}},{{/isnt}}</a></li>
+      {{/each}}
+    </li>
+  </ul>
+</nav>
+{{/isnt}}
+</header>

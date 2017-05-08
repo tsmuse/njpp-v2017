@@ -91,6 +91,14 @@ module.exports = function(grunt) {
         cwd: './node_modules/normalize.css/',
         src: '*.css',
         dest: '<%= config.dist %>/assets/css/'
+      },
+      images: {
+        nonull: true,
+        expand: true,
+        filter: 'isFile',
+        cwd: '<%= config.src %>/assets/img/',
+        src: '*.{png,jpg,svg}',
+        dest: '<%= config.dist %>/assets/img'
       }
     },
 
