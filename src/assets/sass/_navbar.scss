@@ -79,7 +79,6 @@
 
     @include breakpoint($sm-laptop){
       flex:1;
-      padding: $baseline * 3 0 $baseline * 3 $baseline * 3;
     }
   }
   .sub-menu{
