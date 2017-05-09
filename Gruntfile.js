@@ -38,11 +38,8 @@ module.exports = function(grunt) {
         tasks: ['sass:dev']
       },
       autoprefixer: {
-        files: ['<%= config.dist %>/assets/css/njpp.css'],
-        tasks: ['autoprefixer'],
-        options: {
-          debounceDelay: 600
-        }
+        files: ['<%= config.src %>/assets/to-prefix/*.css'],
+        tasks: ['autoprefixer']
       },
       livereload: {
         options: {
@@ -108,7 +105,12 @@ module.exports = function(grunt) {
         dest: '<%= config.dist %>/assets/img'
       }
     },
-
+    // Now spits out it's files into src/assets/to-prefix
+    // for autoprefixer to pick up and move to dist.
+    // It's the only way to autoprefix while the server
+    // is watching the dist/assets/css folder
+    // this temp version can't be removed by clean before
+    // assemble runs because it breaks watch if the folder doesn't exist.
     sass: {
       dev: {
         options: {
@@ -118,7 +120,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.src %>/assets/sass',
           src: ['*.scss'],
-          dest: '<%= config.dist %>/assets/css',
+          dest: '<%= config.src %>/assets/to-prefix',
           ext: '.css'
         }]
       },
@@ -130,11 +132,14 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.src %>/assets/sass',
           src: ['*.scss'],
-          dest: '<%= config.dist %>/assets/css',
+          dest: '<%= config.src %>/assets/to-prefix/',
           ext: '.css'
         }]
       }
     },
+    // This has to pull the CSS from the src folder
+    // otherwise it will loop endlessly while the server
+    // is running
     autoprefixer: {
       options: {
         browsers: ['last 2 versions'],
@@ -142,14 +147,15 @@ module.exports = function(grunt) {
       },
       //uggg I hate naming properties
       prod_css: {
-        src: '<%= config.dist %>/assets/css/njpp.css',
+        expand: true,
+        flatten: true,
+        cwd: '<%= config.src %>/assets/to-prefix/',
+        src: ['*.css'],
+        dest: '<%= config.dist %>/assets/css/'
       }
     },
 
-    // Before generating any new files,
-    // remove any previously-created files.
     clean: ['<%= config.dist %>/**/*.{html,xml,css,map}']
-
   });
 
   grunt.loadNpmTasks('assemble');

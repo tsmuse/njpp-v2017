@@ -12,7 +12,8 @@
     padding:$baseline * 3 0 $baseline * 3 $baseline * 3;
     font-size: 1.1rem;
     line-height: $baseline * 7;
-    @include breakpoint(767px){
+
+    @include breakpoint($tablet){
       font-size: 1.5rem;
       line-height: $baseline * 8;
       padding:$nav-padding;
@@ -23,7 +24,8 @@
   .menu-items{
     flex: 1;
     padding:$baseline * 3 0;
-    @include breakpoint(767px){
+    
+    @include breakpoint($tablet){
       flex: 2;
       padding:$nav-padding;
     }
@@ -43,7 +45,8 @@
       padding:0 0.25rem;
       font-size:0.85rem;
       line-height: $baseline * 7;
-      @include breakpoint(767px){
+
+      @include breakpoint($tablet){
         font-size:1rem;
         line-height: $baseline * 8;
       }
