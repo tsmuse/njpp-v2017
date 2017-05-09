@@ -4,8 +4,6 @@ toc:
   overview: "Overview"
   team: "Leading the team"
   tablet: "Project – QuikView mobile"
-  foo: "bar"
-  woo: "bam"
   images: "Grid of pretty"
 img-grid:
   - http://www.fillmurray.com/860/600
@@ -72,12 +70,4 @@ img-grid:
 
   <p>T-Mobile USA is a huge company. Things don’t always move quickly. We finished this project and it moved into development and didn’t exit development until I was no longer consulting for T-Mobile. I have seen tablet QuikView in use in the company’s retail stores, and the pattern of the sales reps having to move back and forth between the desk and the sales floor was noticeably absent with the tablets in place. </p>
 </section>
-<section class="image-gallery">
-  <h2 id="images">{{toc.images}}</h2>
-  <p>Wanna see more pictures? Everyone always does. Here are a few more images from the QuikView mobile project. </p>
-  <ul class="pretty-grid">
-    {{#each img-grid}}
-      <li><a href=""><img src="{{this}}"/></a></li>
-    {{/each}}
-  </ul>
-</section>
+{{> image-gallery}}

@@ -1,0 +1,17 @@
+<section class="image-gallery">
+  <h2 id="images">{{page.toc.images}}</h2>
+  <p>Wanna see more pictures? Everyone always does. Here are a few more images from the QuikView mobile project. </p>
+  <ul class="pretty-grid">
+    {{#each page.img-grid}}
+      <li><a href="#img-0{{@index}}"><img src="{{this}}"/></a></li>
+    {{/each}}
+  </ul>
+  <!-- Much thanks to Gregory Schier for posting a pure CSS lightbox that OMG why didn't
+       I figure this out ages ago?!?!? https://codepen.io/gschier/pen/HCoqh 
+  -->
+  {{#each page.img-grid}}
+  <a href="#_" class="lightbox-img" id="img-0{{@index}}">
+    <img src="{{this}}">
+  </a>
+  {{/each}}
+</section>

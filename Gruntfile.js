@@ -37,6 +37,13 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/assets/sass/*.scss'],
         tasks: ['sass:dev']
       },
+      autoprefixer: {
+        files: ['<%= config.dist %>/assets/css/njpp.css'],
+        tasks: ['autoprefixer'],
+        options: {
+          debounceDelay: 600
+        }
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -128,6 +135,16 @@ module.exports = function(grunt) {
         }]
       }
     },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions'],
+        map: true
+      },
+      //uggg I hate naming properties
+      prod_css: {
+        src: '<%= config.dist %>/assets/css/njpp.css',
+      }
+    },
 
     // Before generating any new files,
     // remove any previously-created files.
@@ -147,6 +164,7 @@ module.exports = function(grunt) {
     'clean',
     'copy',
     'sass:dist',
+    'autoprefixer',
     'assemble'
   ]);
 

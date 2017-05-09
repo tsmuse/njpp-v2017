@@ -88,30 +88,3 @@
 
   }
 }
-
-.pretty-grid{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style: none;
-  width:100%;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 860px;
-
-  li {
-    flex: 1 1 860px;
-    padding: 0 $baseline;
-    margin-bottom: $baseline;
-
-    @include breakpoint($sm-laptop){
-      max-width: 860px;
-      margin: 0 auto $baseline;
-      flex:1 1 250px;
-    }
-
-    a img {
-      width:100%;
-    }
-  }
-}
