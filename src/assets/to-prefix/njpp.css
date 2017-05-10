@@ -175,21 +175,27 @@ header {
 @media (min-width: 1235px) {
   .home-text-block p {
     font-size: 3rem;
-    line-height: 3.75rem;
+    line-height: 4rem;
     max-width: 1000px;
   }
 }
 .home-text-block p a {
   color: #499E8D;
   text-decoration: none;
-  transition: background ease-in-out 0.18s;
+  transition: background ease-in-out 0.25s;
   transition: color ease-in-out 0.18s;
 }
 .home-text-block p a:hover {
   color: #485da1;
+  border-bottom: 13px solid transparent;
+  background-image: url("../img/underline.svg");
+  background-repeat: space no-repeat;
+  background-origin: padding-box;
+  background-position: 0px calc(10.5px + 100%);
+  background-size: auto 10px;
 }
 .home-text-block .top-headline a {
-  display: inline-block;
+  white-space: nowrap;
 }
 
 .small-only {

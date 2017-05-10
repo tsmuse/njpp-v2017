@@ -29,7 +29,7 @@
 
     @include breakpoint(1235px){
       font-size: 3rem;
-      line-height: $baseline * 15;
+      line-height: $baseline * 16;
       max-width: 1000px;
     }
     a{
@@ -37,7 +37,7 @@
       // color:lighten(black, 40%);
       color: $deepgreen;
       text-decoration: none;
-      transition: background ease-in-out 0.18s;
+      transition: background ease-in-out 0.25s;
       transition: color ease-in-out 0.18s;
 
 
@@ -46,13 +46,19 @@
       // border-bottom: $baseline dotted lighten(black, 20%);
       // need to create image to act as dots, bg that repeats on x-axis, pinned to the bottom
       color: $link-hover-color;
+      border-bottom: 13px solid transparent;
+      background-image: url('../img/underline.svg');
+      background-repeat: space no-repeat;
+      background-origin: padding-box;
+      background-position: 0px calc(10.5px + 100%);
+      background-size:auto 10px;
     }
   }
 
   .top-headline{
 
     a{
-      display:inline-block;
+      white-space:nowrap;
     }
 
   }
