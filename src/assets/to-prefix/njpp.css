@@ -63,17 +63,23 @@ header {
   min-width: 10rem;
 }
 .top-nav .menu-items ul li {
-  color: #85CC9F;
   display: inline-block;
   padding: 0 0.25rem;
+}
+.top-nav .menu-items ul li a {
+  color: #85CC9F;
+  text-decoration: none;
   font-size: 0.85rem;
   line-height: 1.75rem;
 }
 @media (min-width: 768px) {
-  .top-nav .menu-items ul li {
+  .top-nav .menu-items ul li a {
     font-size: 1rem;
     line-height: 2rem;
   }
+}
+.top-nav .menu-items ul li a:hover {
+  color: #485da1;
 }
 
 .toc-menu {
@@ -188,7 +194,7 @@ header {
 .home-text-block p a:hover {
   color: #485da1;
   border-bottom: 13px solid transparent;
-  background-image: url("../img/underline.svg");
+  background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.cls-1{fill:%23499e8d;}</style></defs><title>underline</title><circle class="cls-1" cx="6" cy="6" r="3.5"/></svg>');
   background-repeat: space no-repeat;
   background-origin: padding-box;
   background-position: 0px calc(10.5px + 100%);
@@ -420,6 +426,39 @@ header {
   max-width: 860px;
   max-height: 600px;
   margin-top: 10%;
+}
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.work-container .work-item {
+  flex: 1 1 30rem;
+  max-width: 30rem;
+  border: 2px solid #85CC9F;
+  margin: 0 1rem 1rem 0;
+  padding: 2rem 1rem;
+}
+.work-container .work-item h2 {
+  font-family: "calluna", serif;
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #499E8D;
+  text-align: left;
+}
+.work-container .work-item p {
+  font-family: "calluna-sans", sans-serif;
+  color: #85CC9F;
+}
+.work-container .work-item .role {
+  font-size: 1rem;
+}
+.work-container .work-item .desc {
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=njpp.css.map */

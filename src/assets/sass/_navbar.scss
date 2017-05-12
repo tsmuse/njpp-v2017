@@ -24,7 +24,7 @@
   .menu-items{
     flex: 1;
     padding:$baseline * 3 0;
-    
+
     @include breakpoint($tablet){
       flex: 2;
       padding:$nav-padding;
@@ -40,9 +40,13 @@
 
     ul li{
       // color: lighten(black, 30%);
-      color: $palegreen;
       display:inline-block;
       padding:0 0.25rem;
+    }
+
+    ul li a{
+      color: $palegreen;
+      text-decoration: none;
       font-size:0.85rem;
       line-height: $baseline * 7;
 
@@ -50,7 +54,10 @@
         font-size:1rem;
         line-height: $baseline * 8;
       }
+    }
 
+    ul li a:hover{
+      color: $link-hover-color;
     }
   }
 }

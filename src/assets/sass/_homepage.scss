@@ -47,7 +47,9 @@
       // need to create image to act as dots, bg that repeats on x-axis, pinned to the bottom
       color: $link-hover-color;
       border-bottom: 13px solid transparent;
-      background-image: url('../img/underline.svg');
+      // apparently Firefox still has an issue with # in a data URI
+      // so I've replaced the # in the fill: color with %23
+      background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.cls-1{fill:%23499e8d;}</style></defs><title>underline</title><circle class="cls-1" cx="6" cy="6" r="3.5"/></svg>');
       background-repeat: space no-repeat;
       background-origin: padding-box;
       background-position: 0px calc(10.5px + 100%);

@@ -1,0 +1,30 @@
+---
+title: work
+work:
+  - job:
+      company: "T-mobile USA"
+      role: "UX Architect"
+      desc: "foo bar bar"
+  - job:
+      company: "Mozilla"
+      role: "UX Manager & Design Lead"
+      desc: "foo bar bam"
+  - job:
+      company: "Simppler"
+      role: "Director of Product & Design"
+      desc: "foo bar bar bar"
+---
+
+<section class="work-index">
+  <div class="work-container">
+    {{#each work }}
+    <div class="work-item">
+      {{#each this}}
+      <h2>{{company}}</h2>
+      <p class="role">{{role}}</p>
+      <p class="desc">{{desc}}</p>
+      {{/each}}
+    </div>
+    {{/each}}
+  </div>
+</section>
