@@ -88,3 +88,52 @@
 
   }
 }
+
+.case-study{
+  a{
+    //display:inline-block;
+    // color:lighten(black, 40%);
+    color: $deepgreen;
+    text-decoration: none;
+    transition: background ease-in-out 0.25s;
+    transition: color ease-in-out 0.18s;
+
+
+  }
+  a:hover{
+    // border-bottom: $baseline dotted lighten(black, 20%);
+    // need to create image to act as dots, bg that repeats on x-axis, pinned to the bottom
+    color: $link-hover-color;
+    border-bottom: 13px solid transparent;
+    // apparently Firefox still has an issue with # in a data URI
+    // so I've replaced the # in the fill: color with %23
+    background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.cls-1{fill:%23499e8d;}</style></defs><title>underline</title><circle class="cls-1" cx="6" cy="6" r="3.5"/></svg>');
+    background-repeat: space no-repeat;
+    background-origin: padding-box;
+    background-position: 0px calc(8.75px + 100%);
+    background-size:auto 10px;
+  }
+
+  ul{
+    list-style: none;
+    margin:0 auto $baseline * 10;
+    padding: 0;
+    max-width: 17.75rem;
+
+    @include breakpoint($tablet){
+      max-width: 35.75rem;
+    }
+
+    li{
+      font-size: 1.25rem;
+      line-height: $baseline * 8;
+      padding:0 0 $baseline * 3;
+
+      @include breakpoint($tablet){
+        font-size: 1.4rem;
+        padding:0 0 $baseline * 2;
+      }
+    }
+
+  }
+}

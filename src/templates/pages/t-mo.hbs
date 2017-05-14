@@ -4,17 +4,19 @@ toc:
   overview: "Overview"
   team: "Leading the team"
   tablet: "Project – QuikView mobile"
-  images: "Grid of pretty"
+  images: "More pictures"
 img-grid:
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
-  - http://www.fillmurray.com/860/600
+  - assets/img/portfolio/tmo/tmo_06.png
+  - assets/img/portfolio/tmo/tmo_07.png
+  - assets/img/portfolio/tmo/tmo_08.png
+  - assets/img/portfolio/tmo/tmo_09.png
+  - assets/img/portfolio/tmo/tmo_10.png
+  - assets/img/portfolio/tmo/tmo_11.png
+  - assets/img/portfolio/tmo/tmo_12.png
+  - assets/img/portfolio/tmo/tmo_13.png
+
+gallery-copy: |
+  Wanna see more pictures? Everyone always does. Here are a few more images from the QuikView mobile project: more pages from the schematics and a couple of additional task-flows I mapped out.
 ---
 <h1> {{title}}</h1>
 <section class="case-study">
@@ -25,20 +27,23 @@ img-grid:
   </div>
   <h2 id="team">{{toc.team}}</h2>
   <p>
-    When you spend a large portion of your career working as a freelancer you get to work on a variety of really cool projects. You also get a lot of experience in time management, budget management, and pitching yourself and your work. You don't really get a lot of grooming for leadership. T-mobile was my first attempt at directing the work of other designers and I walked into it unaware and unprepared. I insituted design critiques, streamlined the daily status meeting into a stand-up style check-in, and created a set of templates so the new deisgners I was working alongside would be presenting their work in a predictable, clean, and professional manner as opposed to the hodge-podge of deliverables they were creating when I started. As a freelancer on a team of freelancers, my challenge was being the leader without the power to discipline anyone &mdash; I was the leader because I was the most experienced and their work was better when they followed my lead. (In the years since I have learned that this type of leadership is what I strive for even now that I am usually the manager too.) We delivered consistant improvements month after month with our core metric for the call-center application, time on call, steadily dropping by an average of 1.3 seconds month-over-month, saving the company millions annually. I also did this little tablet project too&hellip;
+    When you spend a large portion of your career working as a freelancer you get to work on a variety of really cool projects. You also get a lot of experience in time management, budget management, and pitching yourself and your work. You don't really get a lot of grooming for leadership. T-mobile was my first attempt at directing the work of other designers and I walked into it unaware and unprepared. I insituted design critiques, streamlined the daily status meeting into a stand-up style check-in, and created a set of templates so the new deisgners I was working alongside would be presenting their work in a predictable, clean, and professional manner as opposed to the hodge-podge of deliverables they were creating when I started. As a freelancer on a team of freelancers, my challenge was being the leader without the power to discipline anyone &mdash; I was the leader because I was the most experienced and their work was better when they followed my lead. (In the years since I have learned that this type of leadership is what I strive for even now that I am usually the manager too.) We delivered consistant improvements month after month with our core metric for the call-center application, time on call, steadily dropping by an average of 0.5 seconds month-over-month, saving the company millions annually. I also did this little tablet project too&hellip;
   </p>
   <h2 id="tablet">{{toc.tablet}}</h2>
-  {{!-- When we started this project, the process of selling a phone at a T-Mobile store was still done on paper and then transfered to a computer that sat on a desk at the back of the sales floor. Our goal was to unteather the sales representatives, to make it faster for them to make a sale and incentiveize them to do the other parts of their job that they didn’t earn a commission for, like technical support or helping customers pay their bill.  --}}
   <p>
-    There are a few main challenges when selling a phone in a retail store: convincing someone to buy the latest and greatest when they may not understand how it's an improvement on their existing handset, handling the rampet indecision that most buyers exhibit when they're in the store
+    There are a few main challenges when selling a phone in a retail store: convincing someone to buy the latest and greatest when they may not understand how it's an improvement on their existing handset and handling the rampet indecision that most buyers exhibit when they're in the store were the most common. We believed that the paper-work required shouldn't be on that list, but when we started this project it was at the top &mdash; sales reps were still writing down things on paper and then ending the transaction back at an old desktop computer at the back of the store re-entering this information they had already written down. This problem not only made it harder for them to sell more phones, and get more comission, it also meant that customers had to wait around while they did this data entry. The wave of tablet computers sparked by the iPad's rececent release provided us with an oportunity to refresh the sales process to make it easier for both the sales rep and the cusomter.
   </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/tmo/tmo-store-2011.jpg" alt="T-mobile store interior circa 2011" />
+  	<figcaption>The displays with video monitors built into them made the experience feel futuristic until you saw your sales rep taking notes on paper for later entery into the seven year old computer at the back of the store.</figcaption>
+  </div>
 
   {{!-- <h3 id="in-store-software-means-in-store-research">In-store software means in-store research</h3> --}}
 
   <p>We started this project by spending about a week in three different retail stores in the greater Seattle area. Through observation and some interviews with the retail staff we uncovered our main considerations to make this software actually work in the day-to-day job of selling cell phones. Juggling multiple customers and activities at once, having to do a lot of backtracking in the actual process of selling and activating a phone, and making a piece of software that would work with full hands and also tolerate things being laid on top of the tablet were key findings.</p>
 
   <div class="image-block">
-  	<img src="assets/img/tmo_01.png" alt="task flow diagram" />
+  	<img src="assets/img/portfolio/tmo/tmo_01.png" alt="task flow diagram" />
   	<figcaption>Diagramming the tasks the sales reps used in their daily work allowed me to understand the non-linear pattern of most of the work they were using the system for and design the new app around the way they were actually working.</figcaption>
   </div>
 
@@ -47,7 +52,7 @@ img-grid:
   <p>Nothing about a customer interaction was linear, and yet the systems we were trying to update all relied on linear, wizard driven task flows. I isolated the major tasks in selling and upgrading a phone and designed all the interaction points of the process to function more like a “hub-and-spoke” and less like a straight line, to accommodate the back and forth nature of how a transaction actually played out. I removed the penalty to the rep for customers changing their mind at the last second about a handset or a service plan, and this was possible mostly due to the shopping cart model I adopted to also account for the fast customer switching requirement. </p>
 
   <div class="image-block">
-  	<img src="assets/img/tmo_02.png" alt="Customer queue wireframe" />
+  	<img src="assets/img/portfolio/tmo/tmo_02.png" alt="Customer queue wireframe" />
   	<figcaption>Moving the customer queue from paper to the tablet was a balancing act between giving the sales reps enough information to enter a customer interaction informed, but not so much information that they would be tempted to cherry pick, something multiple store managers worried about when they reviewed the designs in progress.</figcaption>
   </div>
 
@@ -56,7 +61,7 @@ img-grid:
   <p>The store’s customer queue was literally just a piece of paper on a clipboard. I added pre-verification of customers at the time they entered the queue because it was a real flow stopper when the sales reps had to verify the customer. Customers often had started shopping while waiting, they were ready to buy when it was their turn. I also turned “the list” into a communication channel between the floor manager and sales associates to pass messages like, “customer was upset when she came in.” All of these features combined to allow the sales staff to stay on the sales floor instead of finding the floor manager for their next customer every time.</p>
 
   <div class="image-block">
-  	<img src="assets/img/tmo_03.png" alt="Account details wireframe" />
+  	<img src="assets/img/portfolio/tmo/tmo_03.png" alt="Account details wireframe" />
   	<figcaption>The original account details “screen” was actually six screens. We didn't need most of the information in them to sell or upgrade a customer. In the rare case the sales reps did need the additional details, they still had the desktop version in-store.</figcaption>
   </div>
 
@@ -65,14 +70,19 @@ img-grid:
   <p>The software we were replacing was designed for the call center customer service employees. That meant it had a lot of things the retail sales reps didn’t need to see. One of the biggest challenges of the project was cutting down the account details displays to work as a single screen. There were a lot of “What IFs?” that needed to be explored before I cut anything (and I cut A LOT.) The final layout looks very simple, because it is, and it’s easy to read at a glance. Both were only possible because of the massive cutting of unneeded information.</p>
 
   <div class="image-block">
-  	<img src="assets/img/tmo_04.png" alt="User picker wireframe" />
+  	<img src="assets/img/portfolio/tmo/tmo_04.png" alt="User picker wireframe" />
   	<figcaption>The user picker lock screen surprisingly became the most interesting interface to work on in the app. It's a great example of constraints pushing the design to be better.</figcaption>
   </div>
 
   {{!-- <h3 id="every-tablet-is-my-tablet">Every tablet is “my tablet”</h3> --}}
 
-  <p>In our research, we saw the sales reps carried a lot of different things around in the course of helping a customer. THat meant they were likely to put the tablet down. A lot. We also weren’t going to have one tablet per rep in the stores, a hard design constraint that brought a lot of fun features to life. On the surface, this meant the app needed a to have user accounts and a login and user switching. Having this lock screen let me surface other information quickly: who was currently on the floor, who currently was acting as the floor manager, and who was on break/lunch. This information sounds trivial until you are interrupted while trying to sell a phone by a customer who is looking for the rep that was helping her two hours ago. The system lets a rep pick up any tablet, if she is not currently carrying one, and learn the status of a coworker. </p>
+  <p>In our research, we saw the sales reps carried a lot of different things around in the course of helping a customer. That meant they were likely to put the tablet down. A lot. We also weren’t going to have one tablet per rep in the stores, a hard design constraint that brought a lot of fun features to life. On the surface, this meant the app needed a to have user accounts and a login and user switching. Having this lock screen let me surface other information quickly: who was currently on the floor, who currently was acting as the floor manager, and who was on break/lunch. This information sounds trivial until you are interrupted while trying to sell a phone by a customer who is looking for the rep that was helping her two hours ago. The system lets a rep pick up any tablet, if she is not currently carrying one, and learn the status of a coworker.</p>
 
-  <p>T-Mobile USA is a huge company. Things don’t always move quickly. We finished this project and it moved into development and didn’t exit development until I was no longer consulting for T-Mobile. I have seen tablet QuikView in use in the company’s retail stores, and the pattern of the sales reps having to move back and forth between the desk and the sales floor was noticeably absent with the tablets in place. </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/tmo/tmo_05.png" alt="User picker wireframe" />
+  	<figcaption>While we could have gone for a text-only set of lists, we knew from our research that reps were likely to use the tablet as a prop in their sales, so we tried to balance the utility for the rep with the needs of a customer facing interface.</figcaption>
+  </div>
+
+  <p>T-Mobile USA is a huge company. Things don’t always move quickly. We finished this project and it moved into development and didn’t exit development until I was no longer consulting for T-Mobile. I have seen tablet QuikView in use in the company’s retail stores, and the pattern of the sales reps having to move back and forth between the desk and the sales floor was noticeably absent with the tablets in place. While I don't have any hard numbers to point to about the sucess of the program, a couple years later I asked a random sales rep in the flagship downtown Seattle store, where we did some of our research, how he liked the tablets. Having no idea who I was or the role I played in the system he told me, "They're so much better than the way we used to have to do things." Then he tried to get me to upgrade my iPhone by showing me my options on his tablet. Mission accomplished.</p>
 </section>
 {{> image-gallery}}

@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         tasks: ['autoprefixer']
       },
       copy_images: {
-        files: ['<%= config.src %>/assets/img/*.{png,jpg,svg}'],
+        files: ['<%= config.src %>/assets/img/**/*.{png,jpg,svg}'],
         tasks: ['copy:images']
       },
       livereload: {
@@ -103,10 +103,9 @@ module.exports = function(grunt) {
       images: {
         nonull: true,
         expand: true,
-        filter: 'isFile',
         cwd: '<%= config.src %>/assets/img/',
-        src: '*.{png,jpg,svg}',
-        dest: '<%= config.dist %>/assets/img'
+        src: ['**'],
+        dest: '<%= config.dist %>/assets/img/'
       }
     },
     // Now spits out it's files into src/assets/to-prefix

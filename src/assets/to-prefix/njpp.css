@@ -307,6 +307,44 @@ header {
   color: #85CC9F;
 }
 
+.case-study a {
+  color: #499E8D;
+  text-decoration: none;
+  transition: background ease-in-out 0.25s;
+  transition: color ease-in-out 0.18s;
+}
+.case-study a:hover {
+  color: #485da1;
+  border-bottom: 13px solid transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.cls-1{fill:%23499e8d;}</style></defs><title>underline</title><circle class="cls-1" cx="6" cy="6" r="3.5"/></svg>');
+  background-repeat: space no-repeat;
+  background-origin: padding-box;
+  background-position: 0px calc(8.75px + 100%);
+  background-size: auto 10px;
+}
+.case-study ul {
+  list-style: none;
+  margin: 0 auto 2.5rem;
+  padding: 0;
+  max-width: 17.75rem;
+}
+@media (min-width: 768px) {
+  .case-study ul {
+    max-width: 35.75rem;
+  }
+}
+.case-study ul li {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding: 0 0 0.75rem;
+}
+@media (min-width: 768px) {
+  .case-study ul li {
+    font-size: 1.4rem;
+    padding: 0 0 0.5rem;
+  }
+}
+
 .contact-footer {
   background-color: #499E8D;
   padding: 1.5rem 2rem 3.75rem;
