@@ -1,0 +1,103 @@
+---
+title: Simppler
+toc:
+  overview: "Overview"
+  team: "Leading the team"
+  prospects: "Project – Prospect paradigm shift"
+  sandwich: "Project - Sandwich UI"
+  images: "More pictures"
+img-grid:
+  - assets/img/portfolio/moz/moz_07.png
+  - assets/img/portfolio/moz/moz_08.png
+  - assets/img/portfolio/moz/moz_09.png
+  - assets/img/portfolio/moz/moz_10.png
+  - assets/img/portfolio/moz/moz_12.png
+  - assets/img/portfolio/moz/moz_13.png
+  - assets/img/portfolio/moz/moz_14.png
+  - assets/img/portfolio/moz/moz_15.png
+  - assets/img/portfolio/moz/moz_16.png
+
+gallery-copy: |
+  Wanna see more pictures? Everyone always does. Here are a few more images from :
+---
+<h1> {{title}}</h1>
+<section class="case-study">
+  <p id="overview">
+    I jointed Simppler in 2016 because of all the offers I received, I believed that I would have the most impact on an issue I really cared about: diversity in hiring. It seemed counter intuitive becuase research has shown that referrals tend to make homogenous cultures worse, not better. My work making the tools we offer our customers at Simppler focus on using employee referrals to build more diverse teams. It's a big challenge and I have limited resources to try and meet it. Challenge accepted!
+  </p>
+  <div class="image-block">
+    <img src="assets/img/portfolio/moz/moz_team.jpg" alt="something descriptive"/>
+    <figcaption>  </figcaption>
+  </div>
+  <h2 id="team">{{toc.team}}</h2>
+  <p>
+    At Simppler I'm not just the design lead, I am the leader of the entire Applications Product Development team. What my time so far at Simppler is teaching me is that cross-functional design teams are the best design teams. I was Simppler's only designer for eight months, but while I was doing more individual contributor work than I had at Mozilla I was still leading a team through the design process. This team just happened to consist of software engineers. Our application is more user-centered than it has ever been not just because I came along and started doing design, but because the engineering team is invested in our users the same way all of my UX teams have been. It's something I have always believed was the best way to make software, but now I have proof. It continues to be one of the most diverse roles I've evern played as I act as product manager, design director, interaction designer, and front-end developer. Daily I use the full range of my skills as a designer, manager, and developer in a way I haven't in many years.
+  </p>
+
+  <h2 id="prospects">{{toc.prospects}}</h2>
+  <p>
+    When I started Simppler's application was essentially a bunch of lists of people. This makes a lot of sense because the primary output of the company's machine learning systems is lists of people we think would be a good fit for open jobs as a company. Lists in &rarr; lists out. The primary information being shown in these lists were names and photos (if we had them, which we only did about 30% of the time.) This very sparse display of information didn't give recruiters much to go on, accept the things we didn't really want them to be making decisions on: the person's name or their photo.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_01.png" alt="System model vs mental model diagram" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    As part of my initial research with 13 recruiters from 11 different companies I dug into the pieces of information they were looking for when they reviewed a prospective candidate's resume. The resume is still used as a stand-in for the person when recruiters are making decisions about contacting leads. I knew we needed to recreate this kind of stand-in inside our application, but we could do it more efficiently than displaying a resume. The goal was clear: enable recruiters to quickly evaluate a prospect on her skills and experience, similar to a resume review, without showing the entire resume. At the same time we needed to represent the prospect in a way that was flexible enough to be used consistently across the application, representing the prospect on her journey through the process of becoming a candidate for a job. I also needed to make sure whatever I designed could work on mobile devices, because the application wasn't responsive when I started and we needed to make it work on tablets and smartphones with all the work we were doing.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_01.png" alt="System model vs mental model diagram" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    With the constraints and goals identified, the card quickly stood out as the correct metaphor to represent a prospect in Simppler. It allowed us to create a "mini-resume" for each candidate and allow the users to interact with the prospect one on one. Since I didn't find much batching in the initial research this individual attention was a win for both tasks the users were performing and the mindset we wanted them to be in when thinking about the prospects. The card format allowed me to be modular in the way I would treat the data being displayed, so the card could be configured into multiple modes to represent the prospect's journey to candidacy. It also lended itself perfectly to the mobile viewport, one card was the width of our smallest supported viewport and the layout could build a more complicated grid as the app got more screen space.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_01.png" alt="System model vs mental model diagram" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    With the high-level settled, the bulk of the work on this project was defining modules to build the cards with. I approached this by asking "what question does the user need to answer to make a decision to act?" This framing quickly lead to our initial views. For the recruiter: a "leads" view that answered the three questions our research turned up consistently--"How much experience? Is she a job hopper? Where did she go to school?", and an in-progress view that showed the activity history on a prospect. The in-progress view has since broken into three separate views: in-progress, endorsement, and referral. For the employee application we needed a primary view that answered the question, "How do I know this person?" We also included the in-progress card as a sort of receipt but we don't see a lot of usage of them to date.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_01.png" alt="System model vs mental model diagram" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    Our lists of recommended prospects became grids of cards. While there was some initial concern that this change would make recruiters less efficient while they were working with the data in the system, we found that not to be the case. Because of the lack of batched actions in their workflow, the separation the grid creates makes it easier to focus on an individual and give them attention. Because all the actions available belong and apply to a single card, users can have a moment of concentrated focus on an individual prospect and then quickly act on them before moving on. The decreased density of the grid makes that concentration possible and also enables us to show more information about each prospect without it feeling overwhelming.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_01.png" alt="System model vs mental model diagram" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    In addition to all of the user goals, this redesign of how the Simppler applications treat prospective candidates also allows us to remove or downplay information that has been shown to lead to less diversity in hiring, specifically photos. We focus on trying to answer the questions a recruiter should be focused on, the ones centered on qualifications, as quickly as possible to try to counter as much unconscious bias as we can. Overall the card paradigm has been a success. Our users are interacting with individual prospects more, which was what we wanted to see, and as a result getting higher quality hires from our pool of prospective candidates without having to do all the work of a brute force search.
+  </p>
+
+  <h2 id="sandwich">{{toc.sandwich}}</h2>
+  <p>
+    I'm a big proponent of design systems, in general. They enhance creativity by clearly marking where the existing boundaries are, so you know what you have to push against to move beyond. They bring more people into the conversation about design because a well documented system can be debated on it's rationale, not just people's personal taste. When I started building the design system at Simppler that would eventually become what we now call SandwichUI it was for a much more practical reason: I didn't have time to keep documenting things I had already designed. I was the only designer at Simppler for eight months, and I built a style guide as I went along so that I could produce less documentation of things I had already defined and focus my limited and very in demand time and attention on all the news things we needed designed to hit our relaunch deadline.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_06.jpg" alt="project collage" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    The first project I was handed at Simppler was a total overhaul of the applications in both function and form. If I had decided to do a traditional application interface in one of the many styles that is all the rage these days, we wouldn't have needed a style guide. In my experience engineers are very good at maintaining consistency across modular UI components (as long as they actually build them modularly) and the team at Simppler was in this group. The problem was that I didn't approach Simppler's visual styling like a traditional application, I approached it like a media site and let the chrome fall away. I did this for two very important reasons: the first was that the bulk of the data in the system was text and I knew a solid and simple typographic focused style would make the information easier to consume. The second reason was because there were competitors in the space and they all basically look the same, a style I have come to call "generic flat SASS," and I wanted Simppler to standout from all the competition. By treating the views in Simppler as pages of information to be consumed we not only aligned more to the actual usage of the application, but we also stood out from our competitors. This system with a heavy reliance on typography was not something anyone else in the company had an easy time working with, so I built the first version of the style guide to document the rules. I modularized the each one so that they could be applied like components by the engineers and I could get away with drawing very simpler sketches to define views that were composed of elements we had already designed. All problems solved... until they weren't.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_06.jpg" alt="project collage" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    It quickly became apparent that the style guide wasn't going to be enough all on it's own, when I found myself spending half of my week helping to debug and re-write CSS for the application. Unknown to me when I started, I was the best Sass/CSS developer in the company. In an attempt to regain the time I was spending debugging and refactoring other people's code, I made the decision to add a pattern library to the style guide, with the intent of documenting all of my visual design decisions in Sass/CSS that the engineering team could just consume in our ReactJS apps. This proved not only more fun for me, but also sped up development a lot since I could do design work in Sass/CSS about as fast as I could in Illustrator. Once again most of our problems were solved.
+  </p>
+  <div class="image-block">
+  	<img src="assets/img/portfolio/moz/moz_06.jpg" alt="project collage" />
+  	<figcaption></figcaption>
+  </div>
+  <p>
+    The key to maintaining a design system at a small company has been to start small and document and design only what we need and build it along side the applications we are building. It turns out it's really just like any other type of documentation. When I switched the whole thing over to Fabricator I gained a super cool rapid prototyping tool that has let us explore the feel and timing of interactions quickly. In addition to making our product development process more efficient, the design system has also opened up all our work to the non-technical members of the company. They can find the decisions we're making and read the reasons that we've made them. They have access to our design principles. Most importantly it has made them part of the conversation about the design of the applications and we benefit from a diversity of experiences and opinions in our continued design and development of the Simppler applications.
+  </p>
+</section>
+{{> image-gallery}}
