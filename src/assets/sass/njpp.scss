@@ -10,8 +10,7 @@ $nav-padding: ($baseline * 3) ($baseline * 6);
 $calluna-regular: 400;
 $calluna-light: 300;
 $calluna-semib: 600;
-$calluna-bold: 700;
-$calluna-black: 900;
+
 
 $tablet: 768px;
 $sm-laptop: 1024px;
@@ -62,4 +61,3 @@ header{
 @import 'case-study';
 @import 'contact-footer';
 @import 'image-gallery';
-@import 'work';

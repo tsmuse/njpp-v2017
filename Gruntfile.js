@@ -45,6 +45,10 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/assets/img/**/*.{png,jpg,svg}'],
         tasks: ['copy:images']
       },
+      copy_js: {
+        files: ['<%= config.src %>/assets/js/*.js'],
+        tasks: ['copy:js']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -106,6 +110,13 @@ module.exports = function(grunt) {
         cwd: '<%= config.src %>/assets/img/',
         src: ['**'],
         dest: '<%= config.dist %>/assets/img/'
+      },
+      js: {
+        nonull: true,
+        expand: true,
+        cwd: '<%= config.src %>/assets/js',
+        src: '*.js',
+        dest: '<%= config.dist %>/assets/js'
       }
     },
     // Now spits out it's files into src/assets/to-prefix

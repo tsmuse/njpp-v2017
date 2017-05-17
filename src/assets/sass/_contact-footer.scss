@@ -55,8 +55,12 @@
       max-width:53rem;
     }
   }
+  .first-p {
+    margin-bottom: $baseline * 4;
+  }
 
   a {
+    display: inline-block;
     color: lighten($palegreen, 15%);
     text-decoration: none;
 

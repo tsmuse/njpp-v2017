@@ -7,16 +7,29 @@
 
   .my-name{
     // color: lighten(black, 30%);
-    color: $deepgreen;
+
     flex: 1;
     padding:$baseline * 3 0 $baseline * 3 $baseline * 3;
-    font-size: 1.1rem;
-    line-height: $baseline * 7;
+
 
     @include breakpoint($tablet){
-      font-size: 1.5rem;
-      line-height: $baseline * 8;
       padding:$nav-padding;
+    }
+
+    a {
+      color: $deepgreen;
+      font-size: 1.1rem;
+      line-height: $baseline * 7;
+      text-decoration: none;
+
+      @include breakpoint($tablet){
+        font-size: 1.5rem;
+        line-height: $baseline * 8;
+      }
+
+      &:hover{
+        color: $link-hover-color;
+      }
     }
 
 
@@ -73,22 +86,23 @@
   .title {
     flex:1;
     max-width: 11.625rem;
-    min-width:11.625rem;
-    padding: $baseline * 3 0 $baseline * 3 $baseline * 3;
+    //min-width: 9rem;
+    padding: $baseline * 3 $baseline * 3 $baseline * 3;
     color: $deepgreen;
     font-size: 1.55rem;
     line-height: $baseline * 8;
     font-family: $calluna;
     font-weight: $calluna-regular;
     margin: 0;
+    white-space: nowrap;
 
     @include breakpoint($tablet){
       padding:$nav-padding;
-      padding-right:0;
+      padding-right: 0;
     }
 
     @include breakpoint($sm-laptop){
-      flex:1;
+      flex:0;
     }
   }
   .sub-menu{
@@ -106,6 +120,7 @@
     @include breakpoint($sm-laptop){
       white-space: normal;
       overflow: visible;
+      padding-left: 0.5rem;
     }
 
     li{
